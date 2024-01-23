@@ -41,7 +41,7 @@ isTouchDevice()
 const checker = (elementId) => {
   const gridColumns = container.value.querySelectorAll('.gridCol')
   gridColumns.forEach((element) => {
-    if (elementId == element.id) {
+    if (elementId === element.id) {
       if (draw.value && !erase.value) {
         element.style.backgroundColor = color.value
       } else if (draw.value && erase.value) {
