@@ -1,30 +1,37 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="wrapper">
+    <div class="options">
+      <div class="opt-wrapper">
+        <div class="slider">
+          <label for="width-range">Grid Width</label>
+          <input type="range" id="width-range" min="1" max="35">
+          <span id="width-value">00</span>
+        </div>
+        <div class="slider">
+          <label for="height-range">Grid height</label>
+          <input type="range" id="height-range" min="1" max="35">
+          <span id="height-value">00</span>
+        </div>
+      </div>
+
+      <div class="opt-wrapper">
+        <button id="submit-grid">Create Grid</button>
+        <button id="clear-grid">Clear Grid</button>
+        <input type="color" id="color-input">
+        <button id="erase-btn">Erase</button>
+        <button id="paint-btn">Paint</button>
+      </div>
+
+    </div>
+    <div class="board">
+      <div class="container"></div>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
